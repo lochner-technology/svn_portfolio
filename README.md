@@ -7,28 +7,30 @@ Also allows viewers to comment on each project, storing the comments in a MySQL 
 
 A demo of the most recient version of the project with all features enabled is available here: http://njlochner.com:9495.
 
-Setup:
+###Setup
 You must specify the base URL, source cache directory, and archive directory of the projects.
+
 You must also specify the MySQL database information for comments.
+
 Instructions for configuring the MySQL database can be found in 'SCHEMA/README.txt'
 
-Required ruby libraries:
+#####Required ruby libraries
 
-ruby sinatra for the server: http://www.sinatrarb.com/
-xml-simple for XML parsing: https://github.com/maik/xml-simple
-htmlentities for HTML escaping: https://github.com/threedaymonk/htmlentities
-rubyzip for zipping source archives: https://github.com/rubyzip/rubyzip
-mysql for MySQL database queries: https://rubygems.org/gems/mysql
+- ruby sinatra for the server: http://www.sinatrarb.com/
+- xml-simple for XML parsing: https://github.com/maik/xml-simple
+- htmlentities for HTML escaping: https://github.com/threedaymonk/htmlentities
+- rubyzip for zipping source archives: https://github.com/rubyzip/rubyzip
+- mysql for MySQL database queries: https://rubygems.org/gems/mysql
 
-Other libraries used:
+######Other libraries used
 
-jQuery: http://jquery.com/
-Bootstrap for CSS/JS theme: http://getbootstrap.com/
-google code prettify for displaying source code: https://code.google.com/p/google-code-prettify/
-With adapted tomorrow theme: http://jmblog.github.io/color-themes-for-google-code-prettify/tomorrow/
-fancybox for displaying images: http://fancybox.net/
-Modified CSS for displaying comments: http://codepen.io/magnus16/pen/buGiB
+- jQuery: http://jquery.com/
+- Bootstrap for CSS/JS theme: http://getbootstrap.com/
+- google code prettify for displaying source code: https://code.google.com/p/google-code-prettify/
+- With adapted tomorrow theme: http://jmblog.github.io/color-themes-for-google-code-prettify/tomorrow/
+- fancybox for displaying images: http://fancybox.net/
+- Modified CSS for displaying comments: http://codepen.io/magnus16/pen/buGiB
 
-Copyright 2014 Nicholas Lochner
+Copyright 2014-2015 Nicholas Lochner
 
 Licensed under the GNU GPL v3: http://www.gnu.org/copyleft/gpl.html 
