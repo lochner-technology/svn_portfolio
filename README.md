@@ -1,11 +1,12 @@
 # Subversion Portfolio
+Note: The full source (and demo, this project is my website) is available here: http://njlochner.com/projects/Portfolio/
+I still need to push the source to GitHub.
+
 Portfolio for Subversion projects written with Ruby.
 Includes a file browser for all files in the projects, capable of showing past revisions.
 
 Parses SVN log and list XML data to render the portfolio.
 Also allows viewers to comment on each project, storing the comments in a MySQL database.
-
-A demo of the most recient version of the project with all features enabled is available here: http://njlochner.com:9495.
 
 ###Setup
 You must specify the base URL, source cache directory, and archive directory of the projects.
