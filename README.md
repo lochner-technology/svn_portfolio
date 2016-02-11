@@ -1,7 +1,8 @@
-# Subversion Portfolio
 Note: The full source (and demo, this project is my website) is available here: http://njlochner.com/projects/Portfolio/
 
 I still need to push the source to GitHub.
+
+# Subversion Portfolio
 
 Portfolio for Subversion projects written with Ruby.
 Includes a file browser for all files in the projects, capable of showing past revisions.
