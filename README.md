@@ -1,4 +1,4 @@
-Note: A demo is available here: https://njlochner.com (This project is my website, but the SVN functionality and comments are not currently enabled.)
+A demo is available here: https://njlochner.com (This project is my website, but the SVN functionality and comments are not currently enabled.)
 
 # Subversion Portfolio
 
