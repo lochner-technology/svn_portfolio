@@ -1,0 +1,294 @@
+<%
+   #     Copyright 2014 Nicholas Lochner
+   #
+   #     This file is part of Nicholas Lochner's Portfolio.
+   #
+   #     Nicholas Lochner's Portfolio is free software: you can redistribute it and/or modify
+   #     it under the terms of the GNU General Public License as published by
+   #     the Free Software Foundation, either version 3 of the License, or
+   #     (at your option) any later version.
+   #
+   #     Nicholas Lochner's Portfolio is distributed in the hope that it will be useful,
+   #     but WITHOUT ANY WARRANTY; without even the implied warranty of
+   #     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   #     GNU General Public License for more details.
+   #
+   #     You should have received a copy of the GNU General Public License
+   #     along with Nicholas Lochner's Portfolio.  If not, see <http://www.gnu.org/licenses/>.
+%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Nicholas Lochner">
+  <!-- <link rel="icon" href="../../favicon.ico">-->
+  <title><%=@project.name + @path %></title>
+
+  <link href="/prettify/tomorrow.css" type="text/css" rel="stylesheet" />
+  <link href="/css/file_display.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="/prettify/prettify.js"></script>
+  <%= erb(:head_includes, :layout => false) %>
+</head>
+<body onload="prettyPrint()">
+
+<%#= erb(:navigation, :layout => false) #@todo: Refactor to use the navigation.erb%>
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Nicholas Lochner</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/projects">Projects</a></li>
+        <li><a href="/resume">Resume</a></li>
+        <li data-toggle="modal" data-target="#contactModal"><a href="#">Contact</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+
+<div>
+  <%
+     if @revision != @project.head_revision
+       file_dl_name = "?download=true?revision=" + @revision
+       zip_name = "/archive/" + @project.name + '.r' + @revision + ".zip"
+     else
+       file_dl_name = "?download=true"
+       zip_name = "/archive/" + @project.name + ".zip"
+     end
+  %>
+  <div class="pre-menu">
+    <div class="input-group">
+      <a href="/projects" class="btn btn-success btn-block full-width" style="border-radius: 0px"><span class="glyphicon glyphicon-arrow-left"></span> Back to Projects</a>
+      <div class="input-group-btn">
+        <button type="button" disabled class="btn btn-disabled btn-default" style="border-radius: 0px"><b>Download:</b></button>
+        <a href="<%=zip_name %>" class="btn btn-primary" style="border-radius: 0px"><span class="glyphicon glyphicon-folder-close"></span> Archive</a>
+        <a href="<%=file_dl_name %>" download="" class="btn btn-info" style="border-radius: 0px"><span class="glyphicon glyphicon-arrow-down"></span> File</a>
+      </div>
+    </div>
+    <% # Select the file from HEAD:
+       for file in @project.file_list
+         if file.name == @file_name
+           @file = file
+         end
+       end
+
+       # make revision string.
+       @revision_string = 'r' + @revision
+       value_pair = @file.revision_hash.max_by{|k,v| v}#What is this?
+       if @file != nil and value_pair != nil and @revision >= value_pair[0]
+         @revision = @project.head_revision
+         @revision_string = 'HEAD'
+       end
+    %>
+    <h4>&nbsp;&nbsp;<a href="/projects/<%= @project.name %>"><%=@project.name %></a>
+      <% if @display_revision_history %>
+        <div style="float: right"><a style="cursor: pointer;" data-toggle="modal" data-target="#projectRevModal">Select project revision</a>&nbsp;</div>
+      <% end %>
+    </h4>
+    <% if @display_revision_history %>
+        &nbsp;&nbsp;&nbsp;&nbsp;Revision: <%=@revision_string %>
+        <div>
+        </div>
+    <% end %>
+    <table class="table">
+      <tbody>
+      <%
+         if @revision == @project.head_revision
+           revision_url_arg = ''
+         else
+           revision_url_arg = '?revision=' + @revision
+         end
+
+         for file in @project.file_list(@revision)
+           class_string, target_class, toggle_class_string = file.generate_class_strings
+      %>
+          <% if file.parent_path_escaped == "" %>
+              <tr>
+          <% else %>
+              <tr class="<%=class_string %>" style="background-color: <%=file.color %>;">
+          <% end %>
+          <% if file.type == 'dir' %>
+              <td>
+                <%= file.padding%><i class="<%=file.icon %>"></i> <a class="<%=toggle_class_string %>" onclick="ToggleChildren(this, '<%=target_class %>')" style="cursor: pointer;"><%= file.name %></a>
+              </td>
+          <% elsif file.type == 'image' %>
+              <td>
+                <%= file.padding%><i class="<%=file.icon %>"></i> <a class="fancybox" href="<%= '/projects/'+@project.name+'/'+file.path+revision_url_arg %>"><%= file.name %></a>
+              </td>
+          <% elsif file.type.include? 'archive' %>
+              <td>
+                <%= file.padding%><i class="<%=file.icon %>"></i> <a href="<%= '/projects/'+@project.name+'/'+file.path+revision_url_arg %>?download=true" download="<%= file.name %>"><%= file.name %></a>
+              </td>
+          <% else %>
+              <td>
+                <%= file.padding%><i class="<%=file.icon %>"></i> <a href="<%= '/projects/'+@project.name+'/'+file.path+revision_url_arg %>"><%= file.name %></a>
+              </td>
+          <% end %>
+          <td><%= file.size %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="file-header"></div><center><%=@file_name %>
+      <% if @display_revision_history %>
+      (<%=@revision_string %>) <a style="cursor: pointer;" data-toggle="modal" data-target="#fileRevModal">View history</a></center>
+      <% end %>
+    </div>
+  <%=@file_markup %>
+</div>
+<% if @display_revision_history %>
+<div class="modal fade" id="fileRevModal" tabindex="-1" role="dialog" aria-labelledby="fileRevModal">
+  <div class="modal-dialog" style="width:1400px">
+    <div class="modal-content" >
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title"><%=@file_name %> revision history</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>Revision</th>
+            <th>Action</th>
+            <th>Message</th>
+            <th>Author</th>
+            <th>Date</th>
+          </tr>
+          </thead>
+          <tbody>
+          <%
+             if @file == nil
+               for file in @project.file_list(@revision)
+                 if file.name == @file_name
+                   @file = file
+                 end
+               end
+             end
+
+             for revision in @file.revision_hash
+          %>
+              <% if revision[1] == 'D' %>
+                  <tr>
+              <% else %>
+                  <tr class='clickableRow' href='?revision=<%=revision[0] %>'>
+              <% end %>
+              <td><%=revision[0]%></td>
+              <td><%=revision[1]%></td>
+              <td><%=@master_log.message(revision[0])%></td>
+              <td><%=@master_log.author(revision[0])%></td>
+              <td><%=@master_log.date(revision[0])%></td>
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="projectRevModal" tabindex="-1" role="dialog" aria-labelledby="projectRevModal">
+  <div class="modal-dialog" style="width:1400px">
+    <div class="modal-content" >
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title"><%=@project.name %> revision history</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>Revision</th>
+            <th>Message</th>
+            <th>Author</th>
+            <th>Date</th>
+          </tr>
+          </thead>
+          <tbody>
+          <% @project.revision_list.reverse_each do |revision| %>
+              <tr class='clickableRow' href='?revision=<%=revision %>'>
+                <td><%=revision%></td>
+                <td><%=@master_log.message(revision)%></td>
+                <td><%=@master_log.author(revision)%></td>
+                <td><%=@master_log.date(revision)%></td>
+              </tr>
+
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+
+<!-- Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Contact Me</h4>
+      </div>
+      <div class="modal-body">
+
+        <script TYPE="text/javascript">
+            <!--
+            // protected email script by Joe Maller
+            // JavaScripts available at http://www.joemaller.com
+            // this script is free to use and distribute
+            // but please credit me and/or link to my site
+
+            emailE='gmail.com'
+            emailE=('njlochner' + '@' + emailE)
+            document.write('<A href="mailto:' + emailE + '" style="color:#009900">' + emailE + '</a>')
+
+            //-->
+        </script>
+        <br>(772) 206-0737
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="/js/ie10-viewport-bug-workaround.js"></script>
+
+<!-- Add fancyBox main JS and CSS files -->
+<script type="text/javascript" src="/fb/jquery.fancybox.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="/fb/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $(".clickableRow").click(function() {
+            window.document.location = $(this).attr("href");
+        });
+    });
+
+    $(document).ready(function() {
+        //alert( "Thanks for visiting!" );
+        $(".fancybox").fancybox();
+    });
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<log>
+<logentry
+   revision="4650">
+<author>nlochne2</author>
+<date>2014-09-23T06:50:17.119267Z</date>
+<msg>Removing binaries</msg>
+</logentry>
+<logentry
+   revision="4649">
+<author>nlochne2</author>
+<date>2014-09-23T06:49:42.187032Z</date>
+<msg></msg>
+</logentry>
+<logentry
+   revision="4648">
+<author>nlochne2</author>
+<date>2014-09-23T06:41:07.878763Z</date>
+<msg>Adding HW0</msg>
+</logentry>
+<logentry
+   revision="4469">
+<author>nlochne2</author>
+<date>2014-09-19T20:36:58.955584Z</date>
+<msg></msg>
+</logentry>
+<logentry
+   revision="4329">
+<author>nlochne2</author>
+<date>2014-09-19T14:16:44.492452Z</date>
+<msg></msg>
+</logentry>
+<logentry
+   revision="4211">
+<author>nlochne2</author>
+<date>2014-09-19T04:28:10.547239Z</date>
+<msg>
+</msg>
+</logentry>
+<logentry
+   revision="4210">
+<author>nlochne2</author>
+<date>2014-09-19T04:24:03.636594Z</date>
+<msg></msg>
+</logentry>
+<logentry
+   revision="4209">
+<author>nlochne2</author>
+<date>2014-09-19T04:23:44.940634Z</date>
+<msg>
+</msg>
+</logentry>
+<logentry
+   revision="4142">
+<author>nlochne2</author>
+<date>2014-09-19T02:23:23.438559Z</date>
+<msg>Custom documentation in testplan
+</msg>
+</logentry>
+<logentry
+   revision="4139">
+<author>nlochne2</author>
+<date>2014-09-19T02:19:01.078099Z</date>
+<msg>Final 1.1 commit GUI plan</msg>
+</logentry>
+<logentry
+   revision="4133">
+<author>nlochne2</author>
+<date>2014-09-19T02:14:55.337260Z</date>
+<msg></msg>
+</logentry>
+<logentry
+   revision="4127">
+<author>nlochne2</author>
+<date>2014-09-19T01:52:36.353192Z</date>
+<msg>Final 1.1</msg>
+</logentry>
+<logentry
+   revision="4126">
+<author>nlochne2</author>
+<date>2014-09-19T01:48:44.689914Z</date>
+<msg></msg>
+</logentry>
+<logentry
+   revision="4055">
+<author>nlochne2</author>
+<date>2014-09-18T23:33:07.137414Z</date>
+<msg>GUI Model Done.</msg>
+</logentry>
+<logentry
+   revision="3816">
+<author>nlochne2</author>
+<date>2014-09-18T16:47:02.421994Z</date>
+<msg>Wazir.java</msg>
+</logentry>
+<logentry
+   revision="3590">
+<author>nlochne2</author>
+<date>2014-09-18T03:04:07.279971Z</date>
+<msg>GUI Halfish done</msg>
+</logentry>
+<logentry
+   revision="3555">
+<author>nlochne2</author>
+<date>2014-09-18T00:54:26.774396Z</date>
+<msg></msg>
+</logentry>
+<logentry
+   revision="3522">
+<author>nlochne2</author>
+<date>2014-09-17T22:05:33.629506Z</date>
+<msg>surface commit - doxygen added
+
+ </msg>
+</logentry>
+<logentry
+   revision="3521">
+<author>nlochne2</author>
+<date>2014-09-17T22:02:41.881463Z</date>
+<msg></msg>
+</logentry>
+<logentry
+   revision="3495">
+<author>nlochne2</author>
+<date>2014-09-17T20:17:23.178872Z</date>
+<msg>Partial DestinationOwnership/Movestatus implemented</msg>
+</logentry>
+<logentry
+   revision="3492">
+<author>nlochne2</author>
+<date>2014-09-17T20:05:12.220083Z</date>
+<msg>Board Refactor Done</msg>
+</logentry>
+<logentry
+   revision="3491">
+<author>nlochne2</author>
+<date>2014-09-17T19:54:45.570084Z</date>
+<msg>Added copy method - still need to finish refactoring Board</msg>
+</logentry>
+<logentry
+   revision="3489">
+<author>nlochne2</author>
+<date>2014-09-17T19:32:07.658504Z</date>
+<msg>First change for 1.1</msg>
+</logentry>
+<logentry
+   revision="3011">
+<author>nlochne2</author>
+<date>2014-09-12T20:38:53.167023Z</date>
+<msg>Branching to Assignment1.1</msg>
+</logentry>
+<logentry
+   revision="2761">
+<author>nlochne2</author>
+<date>2014-09-12T04:01:02.659403Z</date>
+<msg></msg>
+</logentry>
+<logentry
+   revision="1750">
+<author>nlochne2</author>
+<date>2014-09-05T05:15:02.943349Z</date>
+<msg></msg>
+</logentry>
+<logentry
+   revision="1723">
+<author>nlochne2</author>
+<date>2014-09-05T04:58:24.214764Z</date>
+<msg>fixes platform issue</msg>
+</logentry>
+<logentry
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+<msg>A0 commit</msg>
+</logentry>
+<logentry
+   revision="115">
+<author>root</author>
+<date>2014-09-02T17:45:34.124330Z</date>
+<msg>created directory nlochne2</msg>
+</logentry>
+</log>

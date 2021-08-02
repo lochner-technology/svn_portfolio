@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<log>
+<logentry
+   revision="4650">
+<author>nlochne2</author>
+<date>2014-09-23T06:50:17.119267Z</date>
+<paths>
+<path
+   action="D"
+   kind="dir">/nlochne2/Assignment0/HW0/bin</path>
+</paths>
+<msg>Removing binaries</msg>
+</logentry>
+<logentry
+   revision="4649">
+<author>nlochne2</author>
+<date>2014-09-23T06:49:42.187032Z</date>
+<paths>
+<path
+   action="M"
+   kind="file">/nlochne2/Assignment0/HW0/bin/lanSimulation/Network.class</path>
+<path
+   action="M"
+   kind="file">/nlochne2/Assignment0/HW0/bin/lanSimulation/internals/Node.class</path>
+<path
+   action="M"
+   kind="file">/nlochne2/Assignment0/HW0/src/lanSimulation/Network.java</path>
+<path
+   action="M"
+   kind="file">/nlochne2/Assignment0/HW0/src/lanSimulation/internals/Node.java</path>
+</paths>
+<msg></msg>
+</logentry>
+<logentry
+   revision="4648">
+<author>nlochne2</author>
+<date>2014-09-23T06:41:07.878763Z</date>
+<paths>
+<path
+   action="A"
+   kind="dir">/nlochne2/Assignment0/HW0</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/HW0/.classpath</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/HW0/.project</path>
+<path
+   action="A"
+   kind="dir">/nlochne2/Assignment0/HW0/.settings</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/HW0/.settings/org.eclipse.jdt.core.prefs</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/HW0/COPYING</path>
+<path
+   action="A"
+   kind="dir">/nlochne2/Assignment0/HW0/bin</path>
+<path
+   action="A"
+   kind="dir">/nlochne2/Assignment0/HW0/bin/lanSimulation</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/HW0/bin/lanSimulation/LANSimulation.class</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/HW0/bin/lanSimulation/Network.class</path>
+<path
+   action="A"
+   kind="dir">/nlochne2/Assignment0/HW0/bin/lanSimulation/internals</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/HW0/bin/lanSimulation/internals/Node.class</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/HW0/bin/lanSimulation/internals/Packet.class</path>
+<path
+   action="A"
+   kind="dir">/nlochne2/Assignment0/HW0/bin/lanSimulation/tests</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/HW0/bin/lanSimulation/tests/LANTests$PreconditionViolationTestCase.class</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/HW0/bin/lanSimulation/tests/LANTests.class</path>
+<path
+   action="A"
+   kind="dir">/nlochne2/Assignment0/HW0/doc</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/HW0/doc/LANSimulationDocument.pdf</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/HW0/doc/README</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/HW0/doc/RefactoringAssignment.pdf</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/HW0/doc/toDoList</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/HW0/expectedOutput.txt</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/HW0/javadoc.xml</path>
+<path
+   action="A"
+   kind="dir">/nlochne2/Assignment0/HW0/src</path>
+<path
+   action="A"
+   kind="dir">/nlochne2/Assignment0/HW0/src/lanSimulation</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/HW0/src/lanSimulation/LANSimulation.java</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/HW0/src/lanSimulation/Network.java</path>
+<path
+   action="A"
+   kind="dir">/nlochne2/Assignment0/HW0/src/lanSimulation/internals</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/HW0/src/lanSimulation/internals/Node.java</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/HW0/src/lanSimulation/internals/Packet.java</path>
+<path
+   action="A"
+   kind="dir">/nlochne2/Assignment0/HW0/src/lanSimulation/tests</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/HW0/src/lanSimulation/tests/LANTests.java</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/HW0/useOutput.txt</path>
+</paths>
+<msg>Adding HW0</msg>
+</logentry>
+<logentry
+   revision="1750">
+<author>nlochne2</author>
+<date>2014-09-05T05:15:02.943349Z</date>
+<paths>
+<path
+   action="D"
+   kind="file">/nlochne2/Assignment0/testfiles/test_main.c</path>
+<path
+   action="D"
+   kind="file">/nlochne2/Assignment0/testfiles/test_main_2.c</path>
+</paths>
+<msg></msg>
+</logentry>
+<logentry
+   revision="1723">
+<author>nlochne2</author>
+<date>2014-09-05T04:58:24.214764Z</date>
+<paths>
+<path
+   action="M"
+   kind="file">/nlochne2/Assignment0/Makefile</path>
+<path
+   action="M"
+   kind="file">/nlochne2/Assignment0/testfiles/log.txt</path>
+<path
+   action="M"
+   kind="file">/nlochne2/Assignment0/testfiles/out.txt</path>
+</paths>
+<msg>fixes platform issue</msg>
+</logentry>
+<logentry
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+<paths>
+<path
+   action="A"
+   kind="dir">/nlochne2/Assignment0</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/LINECOUNT</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/Makefile</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/checkprime.c</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/client.c</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/client.h</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/server.c</path>
+<path
+   action="A"
+   kind="dir">/nlochne2/Assignment0/testfiles</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/testfiles/fox.txt</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/testfiles/log.txt</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/testfiles/out.sol.txt</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/testfiles/out.txt</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/testfiles/sol.log.txt</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/testfiles/sol2.log.txt</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/testfiles/test_connect_to_server.c</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/testfiles/test_fork_check_prime.c</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/testfiles/test_get_data.c</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/testfiles/test_get_data_png.c</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/testfiles/test_main.c</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/testfiles/test_main_2.c</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/testfiles/test_send_string.c</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/testfiles/testfile.txt</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/testfiles/tux.jpg</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/testfiles/tux.png</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/wrapper.c</path>
+<path
+   action="A"
+   kind="file">/nlochne2/Assignment0/wrapper.h</path>
+</paths>
+<msg>A0 commit</msg>
+</logentry>
+</log>

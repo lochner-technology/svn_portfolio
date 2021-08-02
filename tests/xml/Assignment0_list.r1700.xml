@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lists>
+<list
+   path="https://subversion.ews.illinois.edu/svn/fa14-cs242/nlochne2/Assignment0">
+<entry
+   kind="file">
+<name>LINECOUNT</name>
+<size>917</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Makefile</name>
+<size>1468</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>checkprime.c</name>
+<size>929</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>client.c</name>
+<size>7599</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>client.h</name>
+<size>358</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>server.c</name>
+<size>6083</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="dir">
+<name>testfiles</name>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/fox.txt</name>
+<size>44</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/log.txt</name>
+<size>15304</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/out.sol.txt</name>
+<size>278</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/out.txt</name>
+<size>4</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/sol.log.txt</name>
+<size>808</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/sol2.log.txt</name>
+<size>15304</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/test_connect_to_server.c</name>
+<size>998</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/test_fork_check_prime.c</name>
+<size>616</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/test_get_data.c</name>
+<size>739</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/test_get_data_png.c</name>
+<size>683</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/test_main.c</name>
+<size>1287</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/test_main_2.c</name>
+<size>1309</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/test_send_string.c</name>
+<size>1396</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/testfile.txt</name>
+<size>11914</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/tux.jpg</name>
+<size>5447</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/tux.png</name>
+<size>11913</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>wrapper.c</name>
+<size>687</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>wrapper.h</name>
+<size>377</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+</list>
+</lists>

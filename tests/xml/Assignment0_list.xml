@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lists>
+<list
+   path="https://subversion.ews.illinois.edu/svn/fa14-cs242/nlochne2/Assignment0">
+<entry
+   kind="dir">
+<name>HW0</name>
+<commit
+   revision="4650">
+<author>nlochne2</author>
+<date>2014-09-23T06:50:17.119267Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>HW0/.classpath</name>
+<size>307</size>
+<commit
+   revision="4648">
+<author>nlochne2</author>
+<date>2014-09-23T06:41:07.878763Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>HW0/.project</name>
+<size>362</size>
+<commit
+   revision="4648">
+<author>nlochne2</author>
+<date>2014-09-23T06:41:07.878763Z</date>
+</commit>
+</entry>
+<entry
+   kind="dir">
+<name>HW0/.settings</name>
+<commit
+   revision="4648">
+<author>nlochne2</author>
+<date>2014-09-23T06:41:07.878763Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>HW0/.settings/org.eclipse.jdt.core.prefs</name>
+<size>629</size>
+<commit
+   revision="4648">
+<author>nlochne2</author>
+<date>2014-09-23T06:41:07.878763Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>HW0/COPYING</name>
+<size>18011</size>
+<commit
+   revision="4648">
+<author>nlochne2</author>
+<date>2014-09-23T06:41:07.878763Z</date>
+</commit>
+</entry>
+<entry
+   kind="dir">
+<name>HW0/doc</name>
+<commit
+   revision="4648">
+<author>nlochne2</author>
+<date>2014-09-23T06:41:07.878763Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>HW0/doc/LANSimulationDocument.pdf</name>
+<size>36375</size>
+<commit
+   revision="4648">
+<author>nlochne2</author>
+<date>2014-09-23T06:41:07.878763Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>HW0/doc/README</name>
+<size>1230</size>
+<commit
+   revision="4648">
+<author>nlochne2</author>
+<date>2014-09-23T06:41:07.878763Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>HW0/doc/RefactoringAssignment.pdf</name>
+<size>139491</size>
+<commit
+   revision="4648">
+<author>nlochne2</author>
+<date>2014-09-23T06:41:07.878763Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>HW0/doc/toDoList</name>
+<size>1772</size>
+<commit
+   revision="4648">
+<author>nlochne2</author>
+<date>2014-09-23T06:41:07.878763Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>HW0/expectedOutput.txt</name>
+<size>2980</size>
+<commit
+   revision="4648">
+<author>nlochne2</author>
+<date>2014-09-23T06:41:07.878763Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>HW0/javadoc.xml</name>
+<size>393</size>
+<commit
+   revision="4648">
+<author>nlochne2</author>
+<date>2014-09-23T06:41:07.878763Z</date>
+</commit>
+</entry>
+<entry
+   kind="dir">
+<name>HW0/src</name>
+<commit
+   revision="4649">
+<author>nlochne2</author>
+<date>2014-09-23T06:49:42.187032Z</date>
+</commit>
+</entry>
+<entry
+   kind="dir">
+<name>HW0/src/lanSimulation</name>
+<commit
+   revision="4649">
+<author>nlochne2</author>
+<date>2014-09-23T06:49:42.187032Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>HW0/src/lanSimulation/LANSimulation.java</name>
+<size>5845</size>
+<commit
+   revision="4648">
+<author>nlochne2</author>
+<date>2014-09-23T06:41:07.878763Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>HW0/src/lanSimulation/Network.java</name>
+<size>11839</size>
+<commit
+   revision="4649">
+<author>nlochne2</author>
+<date>2014-09-23T06:49:42.187032Z</date>
+</commit>
+</entry>
+<entry
+   kind="dir">
+<name>HW0/src/lanSimulation/internals</name>
+<commit
+   revision="4649">
+<author>nlochne2</author>
+<date>2014-09-23T06:49:42.187032Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>HW0/src/lanSimulation/internals/Node.java</name>
+<size>4162</size>
+<commit
+   revision="4649">
+<author>nlochne2</author>
+<date>2014-09-23T06:49:42.187032Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>HW0/src/lanSimulation/internals/Packet.java</name>
+<size>1828</size>
+<commit
+   revision="4648">
+<author>nlochne2</author>
+<date>2014-09-23T06:41:07.878763Z</date>
+</commit>
+</entry>
+<entry
+   kind="dir">
+<name>HW0/src/lanSimulation/tests</name>
+<commit
+   revision="4648">
+<author>nlochne2</author>
+<date>2014-09-23T06:41:07.878763Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>HW0/src/lanSimulation/tests/LANTests.java</name>
+<size>10293</size>
+<commit
+   revision="4648">
+<author>nlochne2</author>
+<date>2014-09-23T06:41:07.878763Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>HW0/useOutput.txt</name>
+<size>2980</size>
+<commit
+   revision="4648">
+<author>nlochne2</author>
+<date>2014-09-23T06:41:07.878763Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>LINECOUNT</name>
+<size>917</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Makefile</name>
+<size>1463</size>
+<commit
+   revision="1723">
+<author>nlochne2</author>
+<date>2014-09-05T04:58:24.214764Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>checkprime.c</name>
+<size>929</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>client.c</name>
+<size>7599</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>client.h</name>
+<size>358</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>server.c</name>
+<size>6083</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="dir">
+<name>testfiles</name>
+<commit
+   revision="1750">
+<author>nlochne2</author>
+<date>2014-09-05T05:15:02.943349Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/fox.txt</name>
+<size>44</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/log.txt</name>
+<size>150</size>
+<commit
+   revision="1723">
+<author>nlochne2</author>
+<date>2014-09-05T04:58:24.214764Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/out.sol.txt</name>
+<size>278</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/out.txt</name>
+<size>5</size>
+<commit
+   revision="1723">
+<author>nlochne2</author>
+<date>2014-09-05T04:58:24.214764Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/sol.log.txt</name>
+<size>808</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/sol2.log.txt</name>
+<size>15304</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/test_connect_to_server.c</name>
+<size>998</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/test_fork_check_prime.c</name>
+<size>616</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/test_get_data.c</name>
+<size>739</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/test_get_data_png.c</name>
+<size>683</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/test_send_string.c</name>
+<size>1396</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/testfile.txt</name>
+<size>11914</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/tux.jpg</name>
+<size>5447</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>testfiles/tux.png</name>
+<size>11913</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>wrapper.c</name>
+<size>687</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>wrapper.h</name>
+<size>377</size>
+<commit
+   revision="1700">
+<author>nlochne2</author>
+<date>2014-09-05T04:32:24.454829Z</date>
+</commit>
+</entry>
+</list>
+</lists>

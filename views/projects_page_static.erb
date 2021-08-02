@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Nicholas Lochner">
+  <!-- <link rel="icon" href="../../favicon.ico">-->
+  <title>Nicholas Lochner - Projects</title>
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="/css/bootstrap.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="/css/projects.css" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="/js/html5shiv.min.js"></script>
+  <script src="/js/respond.min.js"></script>
+  <![endif]-->
+  <!-- Add jQuery library -->
+  <script type="text/javascript" src="/lib/jquery-1.10.1.min.js"></script>
+  <!-- Add mousewheel plugin (this is optional) -->
+  <script type="text/javascript" src="/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+  <!-- Add table collapse JS -->
+  <script type="text/javascript" src="/js/table_collapse.js"></script>
+</head>
+<body>
+
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Nicholas Lochner</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/projects">Projects</a></li>
+        <li><a href="/resume">Resume</a></li>
+        <li data-toggle="modal" data-target="#contactModal"><a href="#">Contact</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+
+<div class="container">
+  <br>
+  <h4>Featured projects</h4>
+  All source code distributed is licensed under the <a href="http://www.gnu.org/copyleft/gpl.html" target="_blank">GNU GPL v3</a>.
+  <br>
+  <br>
+</div>
+
+<div id="leftCol">
+  <ul class="nav nav-stacked" id="sidebar">
+
+    <li><a href="#PlanetGen_RTS">PlanetGen RTS</a></li>
+    <li><a href="#Portfolio">Portfolio</a></li>
+    <li><a href="#CSAir">CSAir</a></li>
+    <li><a href="#Java_Chess">Java Chess</a></li>
+    <li><a href="#CS241_Programming_Exams">CS241 Programming Exams</a></li>
+    <li><a href="#Teamspeak_3_Music_Bot">Teamspeak 3 Music Bot</a></li>
+    <li><a href="#Old_Projects">Old Projects</a></li>
+
+  </ul>
+</div>
+
+<div class="container">
+
+  <a class="anchor" id="PlanetGen_RTS"></a>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">PlanetGen RTS</h3>
+    </div>
+    <div class="panel-body">
+      A real time strategy game I am currently developing with C++.
+      </br>
+      </br>Features procedurally generated terrain using the diamond-square algorithm.
+      </br>
+      </br><img src="/PlanetGen_RTS.png" width="50%">
+      </br>
+      </br><a href="/PlanetGen_RTS_Windows_Executable.zip">Download Windows executable</a>
+      </br>
+      </br>Source code is not available on this page. If you would like a copy of the source for any reason please inquire.
+    </div>
+    <div class="panel-footer">
+
+      <a href="/projects/PlanetGen_RTS/">View details</a>
+
+    </div>
+  </div>
+
+
+  <a class="anchor" id="Portfolio"></a>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Portfolio</h3>
+    </div>
+    <div class="panel-body">
+      Portfolio for Subversion projects written with Ruby.
+      </br>Includes a file browser for all files in the projects, capable of showing past revisions.
+      </br>
+      </br>Parses SVN log and list XML data to render the portfolio.
+      </br>Also allows viewers to comment on each project, storing the comments in a MySQL database.
+      </br>
+      </br>A demo of the most recient version of the project with all features enabled is available <a href="http://njlochner.com:9495">here: http://njlochner.com:9495</a>.
+    </div>
+    <div class="panel-footer">
+
+      <a href="/projects/Portfolio/">View details and source code</a>
+      <a href="/archive/Portfolio.zip" style="float: right;"><span class="glyphicon glyphicon-arrow-down"></span> Download source archive</a>
+
+    </div>
+  </div>
+
+  <a class="anchor" id="CSAir"></a>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">CSAir</h3>
+    </div>
+    <div class="panel-body">
+      An airline management web application written in Python for CS242 at the University of Illinois.
+      </br>
+      </br>Displays routes with a global map, allows user to modify routes, generate a flight plan with multiple routes and calculate distance and cost for the flight plan.
+      </br>
+      </br>Also shows current weather information for airports in the United States.
+      </br>
+      </br>A demo of the project is available at <a href="http://njlochner.com:5000" target="_blank">http://njlochner.com:5000</a>
+      </br>
+      </br><img src="/CSAir.png" width="50%">
+    </div>
+    <div class="panel-footer">
+
+      <a href="/projects/CSAir/">View details and source code</a>
+      <a href="/archive/CSAir.zip" style="float: right;"><span class="glyphicon glyphicon-arrow-down"></span> Download source archive</a>
+
+    </div>
+  </div>
+
+  <a class="anchor" id="Java_Chess"></a>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Java Chess</h3>
+    </div>
+    <div class="panel-body">
+      Chess game written in Java for CS242 at the University of Illinois.
+      </br>
+      </br>Includes a functional GUI using MVC architecture for two players locally.
+      </br>
+      </br>Also includes a command line user interface and two custom fairy chess game pieces.
+      </br>
+      </br><img src="/Java_Chess.png" width="50%">
+      </br>
+      </br><a href="/Java_Chess_Executable.zip">Download executable JAR</a>
+    </div>
+    <div class="panel-footer">
+
+      <a href="/projects/Java_Chess/">View details and source code</a>
+      <a href="/archive/Java_Chess.zip" style="float: right;"><span class="glyphicon glyphicon-arrow-down"></span> Download source archive</a>
+
+    </div>
+  </div>
+
+
+
+  <a class="anchor" id="CS241_Programming_Exams"></a>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">CS241 Programming Exams</h3>
+    </div>
+    <div class="panel-body">
+      Two programming exams written for CS241: Systems Programming at the University of Illinois while I was a course assistant in the Summer of 2014.
+      </br>
+      </br>The exams tested students on C string manipulation, file I/O, system calls, POSIX threads, inter-process communication(signals, pipes), and networking.
+    </div>
+    <div class="panel-footer">
+
+      <a href="/projects/CS241_Programming_Exams/">View details and source code</a>
+      <a href="/archive/CS241_Programming_Exams.zip" style="float: right;"><span class="glyphicon glyphicon-arrow-down"></span> Download source archive</a>
+
+    </div>
+  </div>
+
+
+  <a class="anchor" id="Teamspeak_3_Music_Bot"></a>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Teamspeak 3 Music Bot</h3>
+    </div>
+    <div class="panel-body">
+      A chat bot written in C for TeamSpeak 3 which communicates with a server via a telnet interface.
+      </br>
+      </br>Parses the chat for commands and broadcasts music from Youtube, Soundcloud, and other websites using <a href="http://rg3.github.io/youtube-dl/">youtube-dl</a> and VLC.
+      </br>
+      </br>Source code is not available on this page. If you would like a copy of the source for any reason please inquire.
+    </div>
+    <div class="panel-footer">
+
+      <a href="/projects/Teamspeak_3_Music_Bot/">View details</a>
+
+    </div>
+  </div>
+
+  <a class="anchor" id="Old_Projects"></a>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Old Projects</h3>
+    </div>
+    <div class="panel-body">
+      These are links to my <b>old</b> past projects.
+      </br>
+      </br><a href="https://web.archive.org/web/20120220015255/http://www.nicholaslochner.com/archive/www.lantay77.com/" target="_blank">Lantay77.com archive</a> - My old personal site before I began work on this one.
+      </br><a href="https://web.archive.org/web/20120220015255/http://www.nicholaslochner.com/archive/www.trayiel.com/fire/" target="_blank">Trayiel.com archive</a> - A multiplayer flash MMORPG which I was developing.
+      </br>Treasurecoastcit.org archive - A website I designed and hosted for the Treasure Coast Crisis Intervention Team. (Archive coming soon)
+      </br><a href="http://lantay77.newgrounds.com/" target="_blank">My newgrounds page containing my flash games.</a>
+      </br>
+      </br><b>Galaxial Sandbox</b> - A prototype for a space action-strategy game, witten in ActionScript 2 with Adobe Flash. <a href="/Galaxial_Sandbox.exe">Download Windows Executable</a>
+      </br>
+      </br><img src="/Galaxial_Sandbox.png" width="50%">
+      </br>
+      </br><b>Infinite Zero</b> - A prototype for a space first person shooter game, written in C++. (Download Link coming soon)
+      </br>
+      </br><img src="/Infinite_Zero.png" width="50%">
+      </br>
+      </br><b>C Chess</b> - A Chess prototype written in C using wxWidgets for the GUI.
+      </br>
+      </br><img src="/CChess.png" width="50%">
+      </br>
+      </br><b>Game automation bots</b> - Wrote bot programs for Eve-Online and World of Warcraft in C++ to automate asteroid mining and auction house trading. Eve-Online bot can manage up to 4 accounts simultaniously.
+      </br>
+      </br><b>Florida Skills USA State Competition 2010 3D Animation</b> - A video created by my teammate and I with Autodesk Maya. We recieved third place.
+      </br>
+      </br><iframe width="560" height="315" src="//www.youtube.com/embed/-JZmqccUfzQ?list=UU94u-Ksk4CHpqzGK04GJ3hQ" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="panel-footer">
+
+      <a href="/projects/Old_Projects/">View details</a>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Contact Me</h4>
+      </div>
+      <div class="modal-body">
+
+        <script TYPE="text/javascript">
+            <!--
+            // protected email script by Joe Maller
+            // JavaScripts available at http://www.joemaller.com
+            // this script is free to use and distribute
+            // but please credit me and/or link to my site
+
+            emailE='gmail.com'
+            emailE=('njlochner' + '@' + emailE)
+            document.write('<A href="mailto:' + emailE + '" style="color:#009900">' + emailE + '</a>')
+
+            //-->
+        </script>
+        <br>(772) 206-0737
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="/js/ie10-viewport-bug-workaround.js"></script>
+
+<!-- Add fancyBox main JS and CSS files -->
+<script type="text/javascript" src="/fb/jquery.fancybox.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="/fb/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".fancybox").fancybox();
+    });
+
+    $('#sidebar').affix({
+        offset: {
+            top: -1000
+        }
+    });
+
+    var $body   = $(document.body);
+    var navHeight = $('.navbar').outerHeight(true) + 10;
+
+    $body.scrollspy({
+        target: '#leftCol',
+        offset: navHeight
+    });
+</script>
+
+</body>
+</html>
