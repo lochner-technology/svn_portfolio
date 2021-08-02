@@ -8,14 +8,14 @@ Includes a file browser for all files in the projects, capable of showing past r
 Parses SVN log and list XML data to render the portfolio.
 Also allows viewers to comment on each project, storing the comments in a MySQL database.
 
-###Setup
+### Setup
 You must specify the base URL, source cache directory, and archive directory of the projects.
 
 You must also specify the MySQL database information for comments.
 
 Instructions for configuring the MySQL database can be found in 'SCHEMA/README.txt'
 
-#####Required ruby libraries
+##### Required ruby libraries
 
 - ruby sinatra for the server: http://www.sinatrarb.com/
 - xml-simple for XML parsing: https://github.com/maik/xml-simple
@@ -23,7 +23,7 @@ Instructions for configuring the MySQL database can be found in 'SCHEMA/README.t
 - rubyzip for zipping source archives: https://github.com/rubyzip/rubyzip
 - mysql for MySQL database queries: https://rubygems.org/gems/mysql
 
-######Other libraries used
+###### Other libraries used
 
 - jQuery: http://jquery.com/
 - Bootstrap for CSS/JS theme: http://getbootstrap.com/
