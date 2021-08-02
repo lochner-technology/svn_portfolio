@@ -1,6 +1,4 @@
-Note: The full source (and demo, this project is my website) is available here: http://njlochner.com/projects/Portfolio/
-
-I still need to push the source to GitHub.
+Note: A demo is available here: https://njlochner.com (This project is my website, but the SVN functionality and comments are not currently enabled.)
 
 # Subversion Portfolio
 
