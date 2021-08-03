@@ -1,4 +1,5 @@
-A demo is available here: https://njlochner.com (this project is my website). You can see the source browser by viewing my repository for my CSAir project (https://njlochner.com/projects/CSAir/CSAir.py.html), or my Java Chess project (https://njlochner.com/projects/Java_Chess/Chess.iml.html). Comments are not currently enabled.
+A demo is available here: https://njlochner.com (this project is my website).
+You can see the source browser by viewing my repository for my CSAir project (https://njlochner.com/projects/CSAir/CSAir.py.html), or my Java Chess project (https://njlochner.com/projects/Java_Chess/Chess.iml.html). Comments are not currently enabled.
 
 # Subversion Portfolio
 
