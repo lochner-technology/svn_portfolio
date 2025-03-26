@@ -36,4 +36,4 @@ Instructions for configuring the MySQL database can be found in 'SCHEMA/README.t
 
 Copyright 2014-2015 Nicholas Lochner
 
-Licensed under the GNU GPL v3: http://www.gnu.org/copyleft/gpl.html 
+Licensed under Creative Commons
