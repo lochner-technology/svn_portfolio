@@ -92,8 +92,11 @@ This program comes with ABSOLUTELY NO WARRANTY
 This is free software, and you are welcome to redistribute it under certain conditions\n
 See LICENSE.txt for details.\n\n")
 
-# initialize comments.
-comments = Comments.new(sql_hostname, sql_user, sql_password, sql_database)
+# initialize comments only when comment functionality is enabled.
+comments = nil
+if comments_enabled
+  comments = Comments.new(sql_hostname, sql_user, sql_password, sql_database)
+end
 
 # parse the XML svn data
 parser = Parser.new(base_svn_url, project_cache_directory, project_archive_directory, display_revision_history)
@@ -222,6 +225,7 @@ end
 
 # Route to post comment.
 post '/post_comment/*' do |project_name|
+  return not_found unless comments_enabled && comments
   # verify project exists
   project = projects.select { |proj|  proj.name == project_name}[0]
   if project == nil
