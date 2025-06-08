@@ -54,7 +54,7 @@ require 'htmlentities'
 require_relative 'project'
 require_relative 'file_class'
 require_relative 'parser'
-require_relative 'svn_log'
+require_relative 'git_log'
 require_relative 'comments'
 
 #@todo: move config options to separate file
@@ -70,13 +70,13 @@ display_file_details = false
 comments_enabled = false
 
 # Set this flag to true if you want to display the last SVN revision info on the project page.
-display_svn_info = false
+display_git_info = false
 
 # Set this flag to true if you want to use the static projects_page_static.erb. This file must be manually created.
 static = true
 
-# base subversion url and project cache directory definitions.
-base_svn_url = 'http://njlochner.com/svn/public/portfolio/class/'
+# List of git repositories to display
+repositories = ['.']
 project_cache_directory = 'cache/'
 project_archive_directory = 'static/archive/'
 
@@ -99,7 +99,7 @@ if comments_enabled
 end
 
 # parse the XML svn data
-parser = Parser.new(base_svn_url, project_cache_directory, project_archive_directory, display_revision_history)
+parser = Parser.new(repositories, project_cache_directory, project_archive_directory, display_revision_history)
 parser.get_flags  # optionally see if the user wants to update XML and cached source.
 master_log, projects = parser.parse_xml  # get the project master log and list of projects
 
@@ -139,13 +139,13 @@ end
 end
 
 # Route for a specific project
-def display_project(master_log, project_name, projects, comments, display_file_details, comments_enabled, display_svn_info)
+def display_project(master_log, project_name, projects, comments, display_file_details, comments_enabled, display_git_info)
   project = projects.select { |proj|  proj.name == project_name}[0]
   if project == nil
     return not_found
   end
 
-  @display_svn_info = display_svn_info
+  @display_svn_info = display_git_info
   @display_file_details = display_file_details
   @comments_enabled = comments_enabled
   @project = project
@@ -154,7 +154,7 @@ def display_project(master_log, project_name, projects, comments, display_file_d
   erb :single_project
 end
 get '/projects/*/' do |project_name|
-  display_project(master_log, project_name, projects, comments, display_file_details, comments_enabled, display_svn_info)
+  display_project(master_log, project_name, projects, comments, display_file_details, comments_enabled, display_git_info)
 end
 
 # Route to display a file.
@@ -165,7 +165,7 @@ get '/projects/*' do |project_name|
 
   slash_index = project_name.index('/')
   if slash_index == nil  # if only the project name was specified, display the project page.
-    return display_project(master_log, project_name, projects, comments, display_file_details, comments_enabled, display_svn_info)
+    return display_project(master_log, project_name, projects, comments, display_file_details, comments_enabled, display_git_info)
   end
 
   # split the project into the path and project name.
@@ -181,33 +181,44 @@ get '/projects/*' do |project_name|
 
   if revision_flag != nil
     revision_number =  revision_flag
-    revision_str = '.r' + revision_number
   else
     revision_number = project.head_revision  # Set revision to head
-    revision_str = ''
   end
 
-  file_path = project_cache_directory + project_name + revision_str + path  # get the path in our local directory for the file.
+  repo_path = project.repo_path
+  file_path = File.join(repo_path, path)
 
-  file_name = path[(path.rindex('/')+1)..-1]  # Strip the path and get the file name.
-  if File.exist?(file_path) and not File.directory?(file_path)
-    # if the file is an image or the download flag was specified, send it.
-    image_extensions = ['.jpeg', '.jpg', '.gif', '.png']
-    if download == 'true' or image_extensions.include? extension
-      send_file file_path
-    end
-
-    if extension == '.pdf'  # if the file is a PDF, build an iframe so the browser can display the PDF with it's built-in pdf viewer.
-      file_markup = "<iframe src=\"/projects/" + project_name + path + "?download=true\" style=\"height: calc(100vh - 100px);width: calc(100% - 400px);\"></iframe>"
+  file_name = path[(path.rindex('/')+1)..-1]
+  image_extensions = ['.jpeg', '.jpg', '.gif', '.png']
+  if revision_flag
+    check_cmd = "git -C #{repo_path} cat-file -e #{revision_number}:#{path}"
+    if system(check_cmd, out: File::NULL, err: File::NULL)
+      if download == 'true' or image_extensions.include? extension
+        temp = `git -C #{repo_path} show #{revision_number}:#{path}`
+        File.write('/tmp/git_temp', temp)
+        send_file '/tmp/git_temp'
+      else
+        coder = HTMLEntities.new
+        file_text = coder.encode(`git -C #{repo_path} show #{revision_number}:#{path}`)
+        file_markup = "<pre class=\"prettyprint linenums lang-" + extension + " pre-box\">" + file_text + '</pre>'
+      end
     else
-      coder = HTMLEntities.new
-      file_text = coder.encode(open(file_path).read)  # read the file's contents as plain text and encode as html.
-      # build the <pre> tag containing the file's text.
-      file_markup = "<pre class=\"prettyprint linenums lang-" + extension + " pre-box\">" + file_text + '</pre>'
+      file_markup = '<br><center>File: ' + project_name + path + ' does not exist for this revision.</center>'
     end
-
   else
-    file_markup = '<br><center>File: ' + project_name + path + ' does not exist for this revision.</center>'
+    if File.exist?(file_path) and not File.directory?(file_path)
+      if download == 'true' or image_extensions.include? extension
+        send_file file_path
+      elsif extension == '.pdf'
+        file_markup = "<iframe src=\"/projects/" + project_name + path + "?download=true\" style=\"height: calc(100vh - 100px);width: calc(100% - 400px);\"></iframe>"
+      else
+        coder = HTMLEntities.new
+        file_text = coder.encode(open(file_path).read)
+        file_markup = "<pre class=\"prettyprint linenums lang-" + extension + " pre-box\">" + file_text + '</pre>'
+      end
+    else
+      file_markup = '<br><center>File: ' + project_name + path + ' does not exist for this revision.</center>'
+    end
   end
 
   # render and send the page.

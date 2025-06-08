@@ -2,16 +2,16 @@ A demo is available here: https://njlochner.com (this project is my website).
 
 You can see the source browser by viewing my repository for my CSAir project (https://njlochner.com/projects/CSAir/CSAir.py.html), or my Java Chess project (https://njlochner.com/projects/Java_Chess/Chess.iml.html). Comments are not currently enabled.
 
-# Subversion Portfolio
+# Git Portfolio
 
-Portfolio for Subversion projects written with Ruby.
+Portfolio for Git projects written with Ruby.
 Includes a file browser for all files in the projects, capable of showing past revisions.
 
-Parses SVN log and list XML data to render the portfolio.
+Parses Git logs to render the portfolio.
 Also allows viewers to comment on each project, storing the comments in a MySQL database.
 
 ### Setup
-You must specify the base URL, source cache directory, and archive directory of the projects.
+You must specify a list of local Git repositories to include in the portfolio along with a cache and archive directory.
 
 You must also specify the MySQL database information for comments.
 
