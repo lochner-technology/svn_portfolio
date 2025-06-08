@@ -17,7 +17,7 @@
 
 #Structure containing attributes for a project.
 class Project
-  def initialize(name, revision, date, last_message, message_rev, description, file_list, display_source)
+  def initialize(name, revision, date, last_message, message_rev, description, file_list, display_source, repo_path)
     @name = name
     @revision = revision
     @date = date
@@ -26,6 +26,7 @@ class Project
     @description = description
     @file_list = file_list  # Hash containing each revision with a file list.
     @display_source = display_source
+    @repo_path = repo_path
   end
 
   def name
@@ -54,6 +55,10 @@ class Project
 
   def display_source
     @display_source
+  end
+
+  def repo_path
+    @repo_path
   end
 
   # Return file list for revision specified

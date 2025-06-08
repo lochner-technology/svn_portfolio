@@ -19,5 +19,9 @@
 # ==== Attributes
 # * date - The date parsed from XML
 def format_date(date)
-  date.gsub('T', ' ').slice(0..(date.index('.'))).gsub('.', ' UTC')
+  if date.include?('T') && date.include?('.')
+    date.gsub('T', ' ').slice(0..(date.index('.'))).gsub('.', ' UTC')
+  else
+    date
+  end
 end
