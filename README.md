@@ -17,6 +17,26 @@ You must also specify the MySQL database information for comments.
 
 Instructions for configuring the MySQL database can be found in 'SCHEMA/README.txt'
 
+### Running the server
+After installing the required Ruby libraries, start the application with:
+
+```
+ruby server.rb
+```
+
+This binds the server to `0.0.0.0` on port `9496`. A convenience script is
+provided to run the app in production mode:
+
+```
+sh run.sh
+```
+
+or run the command from the script directly:
+
+```
+sudo RACK_ENV=production ruby server.rb
+```
+
 ##### Required ruby libraries
 
 - ruby sinatra for the server: http://www.sinatrarb.com/
