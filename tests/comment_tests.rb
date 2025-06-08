@@ -287,7 +287,7 @@ class CommentTests < Test::Unit::TestCase
       return_statement = connection.query("SELECT * FROM `" + project_name +"`")
       new_id = 1
       new_depth = 0
-      return_statement.each_hash do |row|
+      return_statement.each do |row|
         comment_id = row['Comment_ID'].to_i
         if comment_id >= new_id
           new_id = comment_id + 1
@@ -300,7 +300,7 @@ class CommentTests < Test::Unit::TestCase
       # Use prepared statement to prevent SQL injection
       connection.query("INSERT INTO `Portfolio`.`" + project_name +"` (`Date`, `Name`, `Comment`, `Comment_ID`, `Parent_ID`, `Depth`) VALUES ('2014-10-28','" + author + "', '" + comment+ "', '" + new_id.to_s+ "', '" + parent_id.to_s+ "', '" + new_depth.to_s + "');")
 
-     rescue Mysql::Error => e
+     rescue Mysql2::Error => e
         error_msg = e.to_s
 
 

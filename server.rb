@@ -17,7 +17,7 @@
 # xml-simple for XML parsing: https://github.com/maik/xml-simple
 # htmlentities for HTML escaping: https://github.com/threedaymonk/htmlentities
 # rubyzip for zipping source archives: https://github.com/rubyzip/rubyzip
-# mysql for MySQL database queries: https://rubygems.org/gems/mysql
+# mysql2 for MySQL database queries: https://rubygems.org/gems/mysql2
 #
 # Other libraries used:
 #

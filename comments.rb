@@ -15,7 +15,7 @@
 #     You should have received a copy of the GNU General Public License
 #     along with Nicholas Lochner's Portfolio.  If not, see <http://www.gnu.org/licenses/>.
 
-require 'mysql'
+require 'mysql2'
 require 'htmlentities'
 
 class Comments
@@ -36,18 +36,18 @@ class Comments
     # Load good words from DB
     connection = connect
     return_statement = connection.query("SELECT * FROM `GoodWords`")
-    return_statement.each_hash do |word|
+    return_statement.each do |word|
       @good_words << word['Word']
     end
 
     # Load bad words from DB
     return_statement = connection.query("SELECT * FROM `BadWords`")
-    return_statement.each_hash do |word|
+    return_statement.each do |word|
       @bad_words << word
     end
 
     # Check for error and close connection
-    rescue Mysql::Error => e
+    rescue Mysql2::Error => e
       puts e
     ensure
       connection.close if connection
@@ -57,13 +57,10 @@ class Comments
 
   # Open connection to MySQL server and return connection.
   def connect
-    con = Mysql.new @hostname, @user, @password, @database
-    begin # Check for error.
-      rescue Mysql::Error => e
-        puts e.errno
-        puts e.error
-    end
-    con #return connection
+    Mysql2::Client.new(host: @hostname, username: @user, password: @password, database: @database)
+  rescue Mysql2::Error => e
+    puts e.message
+    nil
   end
 
 
@@ -83,7 +80,7 @@ class Comments
     new_depth = 0 # The depth for this comment
 
     # Find the ID and depth for this comment.
-    return_statement.each_hash do |row|
+    return_statement.each do |row|
       comment_id = row['Comment_ID'].to_i
       if comment_id >= new_id
         new_id = comment_id + 1
@@ -110,7 +107,7 @@ class Comments
     statement_to_exec.execute(time_string, author, comment, new_id.to_s, parent_id.to_s, new_depth.to_s)
 
     status = true
-    rescue Mysql::Error => e
+    rescue Mysql2::Error => e
       puts e
       status = false # Error occurred, return false.
 
@@ -227,7 +224,7 @@ class Comments
     return_statement = connection.query("SELECT * FROM `" + project_name +"`")
 
     failed = false
-    rescue Mysql::Error => e # Check for error
+    rescue Mysql2::Error => e # Check for error
       puts e
       failed = true
     ensure # Close the SQL connection
@@ -238,7 +235,7 @@ class Comments
     end
 
     comments = Array.new # Add the comments to an array.
-    return_statement.each_hash do |row|
+    return_statement.each do |row|
       row['Color'] = color(row['Depth'].to_i) # Set the background color for each comment based on the depth.
       comments << row
     end
@@ -270,7 +267,7 @@ class Comments
   def clear_comments(project)
     connection = connect
     connection.query("TRUNCATE TABLE `" + project + "`")
-    rescue Mysql::Error => e
+    rescue Mysql2::Error => e
       puts e
     ensure
       connection.close if connection
