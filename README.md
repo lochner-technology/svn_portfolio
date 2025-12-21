@@ -6,6 +6,14 @@ Includes a file browser for all files in the projects, capable of showing past r
 Parses SVN log and list XML data to render the portfolio.
 Also allows viewers to comment on each project, storing the comments in a MySQL database.
 
+
+<img width="1270" height="921" alt="image" src="https://github.com/user-attachments/assets/ade980ad-2b51-426e-8e14-99f923bbe751" />
+
+<img width="936" height="1344" alt="image" src="https://github.com/user-attachments/assets/dcdeb7c5-19e9-4412-936c-d2b812f8acc6" />
+
+<img width="1529" height="1135" alt="image" src="https://github.com/user-attachments/assets/afbd7fb7-1f01-482b-9708-933be22730be" />
+
+
 ### Setup
 You must specify the base URL, source cache directory, and archive directory of the projects.
 
